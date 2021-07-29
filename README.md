@@ -1,4 +1,5 @@
 # GITS_Assessment
+soal ada pada [link](https://drive.google.com/file/d/1nMNr0tDysyWXASGhjSlTM8blIUoPaVxp/view) ini
 
 ## [Soal 1](https://github.com/alifnaufalyasin/assessment-gits/blob/master/Soal1.go)
 cara penjalankan program ini dengan cara `go run Soal1.go`
