@@ -16,9 +16,8 @@ func main() {
 	// ampm := pisah[1]
 	jam := waktu[0:5]
 
-	if ampm == "AM" {
+	if ampm == "PM" {
 		if jam[0:2] == "12" {
-			jam = "00" + jam[2:]
 			fmt.Println(jam)
 		} else {
 			hour := jam[0:2]
@@ -34,7 +33,12 @@ func main() {
 		}
 
 	} else {
-		fmt.Println(jam)
+		if jam[0:2] == "12" {
+			jam = "00" + jam[2:]
+			fmt.Println(jam)
+		} else {
+			fmt.Println(jam)
+		}
 	}
 	// fmt.Println(jam, ampm)
 
