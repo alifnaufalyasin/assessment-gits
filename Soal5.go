@@ -6,27 +6,28 @@ import (
 )
 
 func main() {
-	fmt.Print("Masukkan Kalimat (xxx di balik xxx): ")
-	var kalimat1, kalimat2, kalimat3, kalimat4 string
-	fmt.Scan(&kalimat1)
-	fmt.Scan(&kalimat2)
-	fmt.Scan(&kalimat3)
-	fmt.Scan(&kalimat4)
+	fmt.Print("Masukkan Kalimat : ")
+	var kalimat string
+	fmt.Scan(&kalimat)
+	arrChar2 := strings.Split(kalimat, "")
+	kalimat = strings.ToLower(kalimat)
 
-	// fmt.Println(kalimat1, kalimat2, kalimat3, kalimat4)
-	arrChar1 := strings.Split(kalimat1, "")
-	arrChar4 := strings.Split(kalimat4, "")
-	var match int = 0
-	for i := 0; i < len(arrChar1); i++ {
-		if arrChar1[i] == arrChar4[len(arrChar4)-1-i] {
+	arrChar := strings.Split(kalimat, "")
+	match := 0
+	for i := 0; i < len(arrChar); i++ {
+		if arrChar[i] == arrChar[len(arrChar)-1-i] {
 			match++
 		}
-		// fmt.Println(arrChar1[i], arrChar4[len(arrChar4)-1-i])
 	}
-	if match == len(arrChar1) {
-		fmt.Println("Result True (karena palindrom)")
+
+	if match == len(arrChar) {
+		fmt.Print(kalimat, " di balik ")
+		for i := 0; i < len(arrChar2); i++ {
+			fmt.Print(arrChar2[len(arrChar2)-1-i])
+		}
+		fmt.Print(" => Result True (karena palindrom)")
 	} else {
-		fmt.Println("Result False (karena bukan palindrome)")
+		fmt.Print("Result False (karena bukan palindrome )")
 	}
 
 }
